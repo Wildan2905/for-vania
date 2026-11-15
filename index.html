@@ -1,0 +1,2978 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy 23rd Birthday, Vania (파니아) ✨ | 윌단</title>
+
+    <!-- Google Fonts: English & Korean Hangul -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              roseGold: "#E0A899",
+              softBlush: "#FFF5F5",
+              warmRose: "#F43F5E",
+              deepWine: "#4C1D2F",
+              champagne: "#FBF7F0",
+              dustyMauve: "#936D78",
+              tsunamiBlue: "#3B82F6",
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              handwriting: ['"Caveat"', "cursive"],
+              script: ['"Sacramento"', "cursive"],
+              korean: ['"Gowun Dodum"', '"Noto Sans KR"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Ambient Glassmorphism */
+      .glow-card {
+        background: rgba(255, 255, 255, 0.84);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 228, 230, 0.75);
+        box-shadow:
+          0 20px 45px -15px rgba(244, 63, 94, 0.08),
+          0 0 25px 0 rgba(253, 164, 175, 0.08);
+      }
+
+      /* Polaroid Styling */
+      .polaroid {
+        background: #ffffff;
+        padding: 14px 14px 44px 14px;
+        box-shadow:
+          0 16px 36px rgba(100, 30, 50, 0.14),
+          0 3px 10px rgba(0, 0, 0, 0.06);
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .polaroid:hover {
+        transform: translateY(-6px) rotate(0deg) scale(1.02) !important;
+        box-shadow: 0 25px 50px rgba(100, 30, 50, 0.22);
+      }
+
+      /* Washi Tape Effect */
+      .washi-tape {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110px;
+        height: 26px;
+        background: rgba(254, 205, 211, 0.7);
+        backdrop-filter: blur(2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+        border-left: 2px dashed rgba(244, 63, 94, 0.35);
+        border-right: 2px dashed rgba(244, 63, 94, 0.35);
+        z-index: 10;
+      }
+
+      /* Ambient Canvas */
+      #ambient-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      /* Birthday Candle Animation */
+      .flame {
+        transform-origin: center bottom;
+        animation: flicker 1.8s infinite ease-in-out;
+      }
+
+      @keyframes flicker {
+        0%,
+        100% {
+          transform: scale(1) rotate(-1deg);
+          opacity: 0.95;
+        }
+        25% {
+          transform: scale(1.12) rotate(2deg);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(0.92) rotate(-2deg);
+          opacity: 0.85;
+        }
+        75% {
+          transform: scale(1.08) rotate(1deg);
+          opacity: 1;
+        }
+      }
+
+      .flame.extinguished {
+        animation: blowOut 0.6s forwards;
+      }
+
+      @keyframes blowOut {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.4, 0.3);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+      }
+
+      /* Vinyl Rotation */
+      @keyframes spinVinyl {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .spinning {
+        animation: spinVinyl 6s linear infinite;
+      }
+
+      /* Soundwave pulse animation */
+      @keyframes soundwave {
+        0%,
+        100% {
+          height: 8px;
+        }
+        50% {
+          height: 28px;
+        }
+      }
+      .sound-bar {
+        animation: soundwave 1.2s ease-in-out infinite;
+      }
+      .sound-bar:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .sound-bar:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .sound-bar:nth-child(4) {
+        animation-delay: 0.45s;
+      }
+      .sound-bar:nth-child(5) {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#FAF5F0] text-stone-800 font-sans selection:bg-rose-200 selection:text-rose-900 relative min-h-screen overflow-x-hidden"
+  >
+    <!-- Ambient Floating Canvas (Hearts & Sparkles) -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- BACKGROUND MUSIC (Audio Player) -->
+    <audio id="bg-audio" src="assets/tsunami.mp3" loop preload="auto">
+      <source src="assets/tsunami.mp3" type="audio/mpeg" />
+      <source src="tsunami.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- FLOATING MUSIC WIDGET (Top Right) -->
+    <div
+      id="music-widget"
+      class="fixed top-4 right-4 z-40 flex items-center gap-3 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-rose-200/80 shadow-lg shadow-rose-950/5 transition hover:scale-105"
+    >
+      <div
+        id="vinyl-icon"
+        class="w-8 h-8 rounded-full bg-gradient-to-tr from-stone-900 via-rose-950 to-stone-800 flex items-center justify-center border-2 border-rose-300 shadow-inner"
+      >
+        <div class="w-2.5 h-2.5 rounded-full bg-rose-200"></div>
+      </div>
+      <div class="text-xs">
+        <p
+          class="font-semibold text-rose-950 leading-tight flex items-center gap-1"
+        >
+          <span>Background Melody</span>
+          <span class="text-rose-400">♫</span>
+        </p>
+        <p id="music-status" class="text-[10px] text-rose-500">Tap to Play ♫</p>
+      </div>
+      <button
+        id="toggle-audio-btn"
+        aria-label="Toggle background music"
+        class="w-7 h-7 rounded-full bg-rose-100 hover:bg-rose-200 text-rose-700 flex items-center justify-center transition"
+      >
+        <svg
+          id="play-icon"
+          class="w-3.5 h-3.5 ml-0.5 fill-current"
+          viewBox="0 0 24 24"
+        >
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        <svg
+          id="pause-icon"
+          class="w-3.5 h-3.5 fill-current hidden"
+          viewBox="0 0 24 24"
+        >
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 💌 ENTRANCE OVERLAY (First Impression / Tap to Open)    -->
+    <!-- ======================================================== -->
+    <div
+      id="intro-modal"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-[#FAF5F0]/95 backdrop-blur-md transition-opacity duration-1000 p-4"
+    >
+      <div
+        class="max-w-md w-full text-center relative z-10 glow-card p-8 md:p-10 rounded-3xl border border-rose-200 shadow-2xl"
+      >
+        <!-- Animated Envelope Icon -->
+        <div
+          class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-rose-100/90 text-rose-500 mb-6 shadow-inner ring-8 ring-rose-50/80 animate-bounce"
+        >
+          <svg
+            class="w-10 h-10"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+            />
+          </svg>
+        </div>
+
+        <div
+          class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-50 text-[11px] font-semibold uppercase tracking-widest text-rose-500 mb-3 border border-rose-100"
+        >
+          <span>November 18</span>
+          <span>•</span>
+          <span>Turning 23</span>
+        </div>
+
+        <h1
+          class="font-serif text-4xl md:text-5xl font-semibold text-rose-950 mb-1 tracking-tight"
+        >
+          For Vania
+          <span class="font-korean text-2xl text-rose-500 font-normal"
+            >(파니아)</span
+          >
+          ✨
+        </h1>
+        <p class="text-stone-500 text-xs italic mb-2">
+          (or should I say... Nisa on Bumble? 😉)
+        </p>
+
+        <p class="text-stone-600 text-sm leading-relaxed mb-8 font-light">
+          "Every sweet moment with you has quietly become my favorite memory."
+        </p>
+
+        <button
+          id="open-gift-btn"
+          class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-rose-500 via-rose-600 to-rose-700 text-white font-medium text-base shadow-lg shadow-rose-500/30 hover:shadow-rose-500/50 hover:scale-[1.02] active:scale-[0.98] transition flex items-center justify-center gap-2 group"
+        >
+          <span>Open Your Birthday Surprise</span>
+          <svg
+            class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MAIN CONTENT CONTAINER                                  -->
+    <!-- ======================================================== -->
+    <main
+      class="relative z-10 max-w-4xl mx-auto px-5 py-12 md:py-20 space-y-24 md:space-y-32"
+    >
+      <!-- ========================================== -->
+      <!-- HERO SECTION                               -->
+      <!-- ========================================== -->
+      <header class="text-center pt-8 md:pt-14 space-y-5">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-rose-700 text-xs font-medium tracking-wide"
+        >
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+          18 November 2003 • Celebrating 23 Years of Grace
+        </div>
+
+        <h1
+          class="font-serif text-5xl md:text-7xl font-bold text-rose-950 leading-tight"
+        >
+          Happy 23rd Birthday, <br class="hidden sm:inline" />
+          <span
+            class="font-script text-6xl md:text-8xl text-rose-600 font-normal block mt-1"
+            >Vania</span
+          >
+        </h1>
+
+        <!-- Korean Name Badge -->
+        <div
+          class="inline-flex items-center px-4 py-1 rounded-full bg-white/90 border border-rose-200 shadow-sm"
+        >
+          <span class="font-korean text-base font-semibold text-rose-600"
+            >파니아</span
+          >
+        </div>
+
+        <p
+          class="text-base md:text-lg text-stone-600 max-w-xl mx-auto font-light leading-relaxed"
+        >
+          To the prettiest girl who brought so much happiness into my world —
+          today is all about celebrating your 23rd chapter, your pure laughter,
+          and all the sweet moments we've shared so far.
+        </p>
+
+        <!-- Scroll Down Indicator -->
+        <div class="pt-6">
+          <a
+            href="#chapter-origin"
+            class="inline-flex flex-col items-center text-xs text-rose-400 hover:text-rose-600 transition gap-2 group"
+          >
+            <span>Walk through our timeline</span>
+            <svg
+              class="w-4 h-4 animate-bounce text-rose-500"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 1: THE ORIGIN (BUMBLE TO INSTAGRAM)-->
+      <!-- ========================================== -->
+      <section id="chapter-origin" class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >01</span
+          >
+
+          <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7 space-y-4">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+              >
+                <span>Where It All Began</span>
+                <span>•</span>
+                <span class="text-amber-600">Bumble & LinkedIn Spark</span>
+              </div>
+
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                From "Nisa" on Bumble to @vaniacha_
+              </h2>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Our story started with a fateful swipe on Bumble. Back then,
+                your profile said <strong>"Nisa"</strong>, but you immediately
+                caught my attention with that radiant aura.
+              </p>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Then on
+                <span class="text-rose-600 font-semibold">September 20</span>,
+                we became mutual connections on LinkedIn of all places! Seeing
+                you there made me smile — you were smart, ambitious, and
+                effortlessly captivating.
+              </p>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                The very next day, on
+                <span class="text-rose-600 font-semibold">September 21</span>, I
+                took a leap of faith and tapped <strong>Follow</strong> on your
+                Instagram (<span class="text-stone-800 font-medium"
+                  >@vaniacha_</span
+                >). I wanted to know more about the girl behind the screen,
+                completely unaware that you were about to become my favorite
+                person.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-2 text-xs">
+                <span
+                  class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full"
+                  >💛 Bumble Match</span
+                >
+                <span
+                  class="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 rounded-full"
+                  >💼 LinkedIn Mutual (20 Sep)</span
+                >
+                <span
+                  class="bg-rose-50 text-rose-700 border border-rose-200 px-3 py-1 rounded-full"
+                  >📸 IG Follow (21 Sep)</span
+                >
+              </div>
+            </div>
+
+            <!-- Instagram Profile Mockup -->
+            <div class="md:col-span-5 flex justify-center">
+              <div
+                class="w-full max-w-xs bg-white rounded-3xl shadow-xl border border-stone-200/80 p-5 space-y-4 transform hover:rotate-1 transition-transform"
+              >
+                <div
+                  class="flex items-center justify-between border-b border-stone-100 pb-3"
+                >
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                    <span class="text-xs font-semibold text-stone-700"
+                      >instagram</span
+                    >
+                  </div>
+                  <span class="text-[10px] text-stone-400">21 Sept</span>
+                </div>
+
+                <!-- Profile Info -->
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-14 h-14 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 via-rose-500 to-fuchsia-600 flex-shrink-0"
+                  >
+                    <div
+                      class="w-full h-full rounded-full bg-white p-0.5 overflow-hidden"
+                    >
+                      <img
+                        src="assets/profile-vania.jpg"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'
+                        "
+                        alt="Vania"
+                        class="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden">
+                    <p class="font-bold text-sm text-stone-900 truncate">
+                      Vania
+                      <span
+                        class="font-korean text-xs text-rose-500 font-normal"
+                        >(파니아)</span
+                      >
+                      ✨
+                    </p>
+                    <p class="text-xs text-rose-600 font-medium">@vaniacha_</p>
+                    <span
+                      class="inline-block mt-1 text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200"
+                    >
+                      ✓ Following
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Romantic Note Inside Mockup -->
+                <div
+                  class="bg-rose-50/70 rounded-2xl p-3.5 text-xs text-rose-900 font-handwriting text-xl leading-snug"
+                >
+                  "One small tap on September 21... and the best chapter of my
+                  life silently began."
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 2: OUR FIRST CHAT (SEPTEMBER 24)   -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >02</span
+          >
+
+          <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+            <!-- Screenshot Photo Card -->
+            <div class="md:col-span-6 order-2 md:order-1 flex justify-center">
+              <div
+                class="polaroid transform -rotate-1 hover:rotate-0 rounded-2xl max-w-sm w-full"
+              >
+                <!-- Washi Tape -->
+                <div class="washi-tape"></div>
+
+                <!-- Chat Screenshot Container -->
+                <div
+                  class="w-full aspect-[4/5] bg-stone-100 rounded-xl overflow-hidden border border-stone-200 relative group cursor-pointer"
+                  onclick="openPhotoModal('assets/chat-first.jpg')"
+                >
+                  <img
+                    id="chat-photo"
+                    src="assets/chat-first.jpg"
+                    onerror="
+                      this.onerror = null;
+                      this.src =
+                        'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';
+                    "
+                    alt="First Chat on Instagram"
+                    class="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent flex items-end p-4"
+                  >
+                    <div class="text-white">
+                      <span
+                        class="text-[10px] uppercase font-bold tracking-wider text-rose-300 bg-rose-950/70 px-2 py-0.5 rounded"
+                        >24 September</span
+                      >
+                      <p class="text-xs font-medium mt-1">
+                        Click to view full screenshot
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Caption -->
+                <div class="mt-4 text-center">
+                  <p class="font-handwriting text-2xl text-stone-800">
+                    "Our First Words ✨"
+                  </p>
+                  <p class="text-[11px] text-stone-400 font-sans tracking-wide">
+                    September 24 • Where the butterflies started
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="md:col-span-6 order-1 md:order-2 space-y-4">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+              >
+                <span>The First Direct Message</span>
+                <span>•</span>
+                <span class="text-rose-600 font-bold">24 September</span>
+              </div>
+
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                The Day We Finally Talked
+              </h2>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Three days after I followed you, on
+                <strong>September 24</strong>, the silence broke. I remember
+                checking my phone nervously, holding my breath, and finally
+                sliding into your DMs.
+              </p>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                I still keep this screenshot saved like a little piece of
+                history. Right from your very first sentence, you were so
+                remarkably cheerful, energetic, and full of bright positive
+                vibes! There was such an infectious, happy spark in the way you
+                answered that instantly lit up my whole day and put the biggest
+                smile on my face.
+              </p>
+
+              <div class="bg-rose-50/70 p-4 rounded-2xl border border-rose-100">
+                <p class="font-handwriting text-xl text-rose-900">
+                  "Your cheerful energy lit up my whole day right from the first
+                  text ✨"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 3: THE FIRST STICKER (NAILONG)      -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-amber-100/50 select-none pointer-events-none"
+            >03</span
+          >
+
+          <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7 space-y-4">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-amber-600 font-semibold bg-amber-50 px-3 py-1 rounded-md"
+              >
+                <span>Our First Sticker</span>
+                <span>•</span>
+                <span class="text-amber-700 font-bold">Nailong 💛</span>
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                The Iconic Nailong Sticker
+              </h2>
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Out of all the stickers in the universe, the very first sticker
+                you sent me was <strong>Nailong</strong> (奶龙)! That chubby,
+                goofy, delightfully cheerful yellow dinosaur matched your bubbly
+                personality so effortlessly.
+              </p>
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Seeing Nailong pop up in our chat made me laugh out loud. It
+                proved right away how delightfully genuine, fun, and adorable
+                you are. I saved that sticker immediately — and even today,
+                whenever I see Nailong, I instantly think of your bright, joyful
+                smile.
+              </p>
+
+              <div
+                class="flex items-center gap-2 pt-2 text-xs text-amber-600 font-medium"
+              >
+                <span>💛</span>
+                <span
+                  >The start of all our cute inside jokes & favorite
+                  reactions.</span
+                >
+              </div>
+            </div>
+
+            <!-- Sticker Display Card -->
+            <div class="md:col-span-5 flex justify-center">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-2 bg-gradient-to-r from-amber-300 via-yellow-300 to-rose-200 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-500"
+                ></div>
+
+                <div
+                  class="relative bg-white rounded-3xl p-6 shadow-xl border border-amber-100 flex flex-col items-center text-center space-y-4 max-w-xs"
+                >
+                  <div
+                    class="w-44 h-44 flex items-center justify-center p-3 rounded-2xl bg-amber-50/50 border border-amber-100/80"
+                  >
+                    <img
+                      id="sticker-img"
+                      src="assets/first-sticker.png"
+                      onerror="
+                        this.onerror = null;
+                        this.src = 'assets/first-sticker.png';
+                      "
+                      alt="Nailong Sticker"
+                      class="max-w-full max-h-full object-contain filter drop-shadow-md hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+
+                  <div>
+                    <span
+                      class="text-xs uppercase font-semibold text-amber-500 tracking-wider"
+                      >First Sticker • Nailong</span
+                    >
+                    <p class="font-handwriting text-2xl text-amber-900 mt-1">
+                      "The cutest yellow dragon 💛"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 4: THE FIRST CALL (WHATSAPP CALL)   -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >04</span
+          >
+
+          <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+            <!-- Mockup WhatsApp Voice Call UI -->
+            <div class="md:col-span-6 order-2 md:order-1 flex justify-center">
+              <div
+                class="w-full max-w-xs bg-[#0b141a] rounded-[38px] p-5 shadow-2xl border-4 border-stone-800 text-white relative overflow-hidden flex flex-col justify-between min-h-[460px]"
+              >
+                <!-- Top Notch & WhatsApp Header -->
+                <div>
+                  <div
+                    class="w-20 h-3.5 bg-stone-900 rounded-full mx-auto mb-4"
+                  ></div>
+
+                  <div
+                    class="flex items-center justify-between text-stone-400 text-xs px-1 border-b border-stone-800/80 pb-3"
+                  >
+                    <div class="flex items-center gap-1.5 text-stone-300">
+                      <svg
+                        class="w-4 h-4 text-emerald-500"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.75 19.5L8.25 12l7.5-7.5"
+                        />
+                      </svg>
+                      <span class="text-[11px] font-medium text-stone-300"
+                        >WhatsApp Call</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-1 text-[10px] text-stone-400"
+                    >
+                      <span>🔒</span>
+                      <span>End-to-end encrypted</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Center: Caller Avatar & Info -->
+                <div class="text-center space-y-3.5 my-auto py-2">
+                  <!-- WhatsApp Profile Picture -->
+                  <div class="relative inline-block">
+                    <div
+                      class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-emerald-500/40 via-teal-400/20 to-emerald-600/40 mx-auto shadow-2xl ring-4 ring-emerald-500/10"
+                    >
+                      <img
+                        src="assets/whatsapp-profile.jpg"
+                        onerror="
+                          this.onerror = null;
+                          this.src = 'whatsapp-profile.jpg';
+                        "
+                        alt="파니아 WhatsApp Profile"
+                        class="w-full h-full object-cover rounded-full shadow-inner"
+                      />
+                    </div>
+                    <!-- Live connected badge -->
+                    <span
+                      class="absolute bottom-1 right-2 w-4 h-4 rounded-full bg-emerald-500 border-2 border-[#0b141a] shadow-md shadow-emerald-500/50 animate-pulse"
+                    ></span>
+                  </div>
+
+                  <!-- Contact Name in Hangul -->
+                  <div>
+                    <h3
+                      class="font-korean text-3xl font-bold tracking-wide text-white"
+                    >
+                      파니아
+                    </h3>
+                    <p
+                      class="text-xs text-emerald-400/90 font-sans mt-0.5 font-medium flex items-center justify-center gap-1"
+                    >
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-emerald-400"
+                      ></span>
+                      WhatsApp Voice Call
+                    </p>
+                  </div>
+
+                  <!-- Animated Audio Waveform -->
+                  <div
+                    class="flex items-center justify-center gap-1.5 h-7 py-1"
+                  >
+                    <div
+                      class="w-1 bg-emerald-400 rounded-full sound-bar"
+                    ></div>
+                    <div
+                      class="w-1 bg-emerald-300 rounded-full sound-bar"
+                    ></div>
+                    <div class="w-1 bg-teal-200 rounded-full sound-bar"></div>
+                    <div
+                      class="w-1 bg-emerald-300 rounded-full sound-bar"
+                    ></div>
+                    <div
+                      class="w-1 bg-emerald-400 rounded-full sound-bar"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="inline-block px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-stone-200 tracking-wider font-mono shadow-inner"
+                  >
+                    01:48:23 • Connected
+                  </div>
+                </div>
+
+                <!-- Bottom: WhatsApp In-Call Control Pill -->
+                <div
+                  class="bg-[#1f2c34] rounded-full p-2.5 px-3 flex items-center justify-between shadow-2xl border border-stone-800"
+                >
+                  <!-- Speaker Button -->
+                  <div
+                    class="w-11 h-11 rounded-full bg-[#2a3942] hover:bg-[#374248] text-white flex items-center justify-center transition shadow-sm"
+                    title="Speaker"
+                  >
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Video Switch Button -->
+                  <div
+                    class="w-11 h-11 rounded-full bg-[#2a3942] hover:bg-[#374248] text-white flex items-center justify-center transition shadow-sm"
+                    title="Video"
+                  >
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Mute Mic Button -->
+                  <div
+                    class="w-11 h-11 rounded-full bg-[#2a3942] hover:bg-[#374248] text-white flex items-center justify-center transition shadow-sm"
+                    title="Mute"
+                  >
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"
+                      />
+                      <path
+                        d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Red End Call Button -->
+                  <div
+                    class="w-12 h-12 rounded-full bg-[#ea0038] hover:bg-[#d60032] text-white flex items-center justify-center shadow-lg shadow-red-900/50 transition transform hover:scale-105 active:scale-95"
+                    title="End call"
+                  >
+                    <svg
+                      class="w-6 h-6 fill-current transform rotate-[135deg]"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="pt-2 text-center">
+                  <span class="text-[10px] text-stone-400 italic font-mono"
+                    >"Hours felt like minutes on WhatsApp with you."</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="md:col-span-6 order-1 md:order-2 space-y-4">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-emerald-700 font-semibold bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-md"
+              >
+                <span>A Voice That Feels Like Home</span>
+                <span>•</span>
+                <span class="text-emerald-800 font-bold"
+                  >First WhatsApp Call</span
+                >
+              </div>
+
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                The Day You Became
+                <span class="font-korean text-rose-600">"파니아"</span> on
+                WhatsApp
+              </h2>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Texting you was already the highlight of my days, but hearing
+                your sweet, lively voice for the very first time on WhatsApp?
+                That completely swept me off my feet.
+              </p>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                I remember saving your contact as
+                <strong class="font-korean text-rose-600 font-semibold"
+                  >파니아</strong
+                >. There was something so special, comforting, and uniquely ours
+                about seeing your name saved like that.
+              </p>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Your voice was even more joyful and warm than I could have
+                imagined. We ended up talking for hours into the quiet of the
+                night — and when we finally had to hang up, I just couldn't stop
+                smiling.
+              </p>
+
+              <div
+                class="bg-rose-50/70 p-4 rounded-2xl border border-rose-100 flex items-center gap-3"
+              >
+                <span class="text-2xl">📞</span>
+                <p class="font-handwriting text-xl text-rose-900">
+                  "Hearing you laugh on WhatsApp is still my favorite sound."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 5: MY FIRST EFFORT (THE GLASSES!)   -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >05</span
+          >
+
+          <div class="relative z-10 space-y-6">
+            <div class="max-w-xl">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md mb-2"
+              >
+                <span>My First Effort</span>
+                <span>•</span>
+                <span class="text-rose-600 font-bold"
+                  >The Glasses Mission 👓</span
+                >
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                The Great Glasses Hunt
+              </h2>
+              <p class="text-stone-500 text-xs italic">
+                (A story that was meant to be dramatic, but turned into our
+                funniest inside joke)
+              </p>
+            </div>
+
+            <!-- Highlight Box for the Glasses Story -->
+            <div
+              class="grid md:grid-cols-12 gap-6 bg-gradient-to-br from-white to-rose-50/60 rounded-3xl p-6 md:p-8 border border-rose-100 shadow-sm items-center"
+            >
+              <div class="md:col-span-8 space-y-4">
+                <div class="flex items-center gap-2 text-rose-600">
+                  <span class="text-2xl">👓</span>
+                  <span class="text-xs uppercase font-bold tracking-wider"
+                    >A Memory That Still Makes Me Smile</span
+                  >
+                </div>
+
+                <h3
+                  class="font-serif text-2xl font-bold text-stone-900 leading-snug"
+                >
+                  Searching everywhere for your lost glasses... only for you to
+                  find them at home!
+                </h3>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  When you told me your favorite glasses were lost, I
+                  immediately went into full detective mode. I scoured optical
+                  shops, searched online catalogs, and looked at countless
+                  frames just trying to find a pair that looked identical to
+                  yours so you wouldn't feel sad or uncomfortable without them.
+                </p>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  And then came your message:
+                  <em
+                    >"Wait... I found them. They were in my house the whole
+                    time!"</em
+                  >
+                  😂
+                </p>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  We laughed so hard about it. But in all honesty, that was the
+                  moment I realized something important: I would happily search
+                  the entire city a thousand times over if it meant seeing you
+                  happy and relieved.
+                </p>
+              </div>
+
+              <div
+                class="md:col-span-4 bg-rose-100/60 rounded-2xl p-6 border border-rose-200/50 text-center space-y-2"
+              >
+                <span class="text-3xl block">🥹🤍</span>
+                <p class="font-handwriting text-2xl text-rose-900 leading-snug">
+                  "No effort is ever wasted when it's done for you,
+                  <span class="font-korean">파니아</span>."
+                </p>
+                <span
+                  class="font-korean text-xs text-rose-500 font-medium block pt-1"
+                  >— 윌단</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 6: FIRST MEET AT SUSHI TEI GI      -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >06</span
+          >
+
+          <div class="relative z-10 space-y-8">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+              >
+                <span>The Moment Time Stood Still</span>
+                <span>•</span>
+                <span class="text-rose-600 font-bold"
+                  >17 October • 1st Date</span
+                >
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-5xl font-semibold text-rose-950"
+              >
+                When My Hands Started Shaking
+              </h2>
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                October 17 at Sushi Tei, Grand Indonesia — the day the digital
+                screen turned into living, breathing magic.
+              </p>
+            </div>
+
+            <!-- Content Grid: Story, Map, and Polaroid -->
+            <div class="grid md:grid-cols-12 gap-8 items-start pt-2">
+              <!-- Left Column: Story & Location Map -->
+              <div class="md:col-span-7 space-y-6">
+                <!-- Location Badge -->
+                <div
+                  class="flex items-start gap-4 bg-white/90 p-4 rounded-2xl border border-rose-100 shadow-sm"
+                >
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 to-rose-600 text-white flex items-center justify-center flex-shrink-0 shadow-md shadow-rose-500/20"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span
+                      class="text-[10px] uppercase font-bold tracking-wider text-rose-500"
+                      >First Meet Location</span
+                    >
+                    <h3 class="font-serif text-xl font-bold text-stone-900">
+                      Sushi Tei — Grand Indonesia (GI)
+                    </h3>
+                    <p class="text-xs text-stone-500 mt-0.5">
+                      Central Jakarta • October 17
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Romantic Story: The Shaking Hands -->
+                <div
+                  class="space-y-3.5 text-stone-600 text-sm md:text-base leading-relaxed"
+                >
+                  <p>
+                    To be completely honest with you...
+                    <strong>I was literally trembling.</strong>
+                  </p>
+                  <p>
+                    My hands were shaking under the table before you arrived. I
+                    had practiced in my head what I was going to say, how I
+                    would greet you, and how to look calm and collected. But the
+                    second you walked through that entrance at Sushi Tei GI, all
+                    my scripts disappeared.
+                  </p>
+                  <p>
+                    You were so stunning in person that my breath caught in my
+                    throat. Every photograph I'd seen of you couldn't compare to
+                    your real-life warmth, the gentle way you spoke, and that
+                    sweet smile sitting right across from me.
+                  </p>
+                </div>
+
+                <!-- Interactive Google Map Embed -->
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-stone-500"
+                  >
+                    <span
+                      class="font-medium text-rose-950 flex items-center gap-1.5"
+                    >
+                      <svg
+                        class="w-4 h-4 text-rose-500"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                        />
+                      </svg>
+                      Interactive Map: Where Our First Chapter Unfolded
+                    </span>
+                    <a
+                      href="https://maps.google.com/?q=Sushi+Tei+Grand+Indonesia"
+                      target="_blank"
+                      class="text-rose-600 hover:underline flex items-center gap-1"
+                    >
+                      <span>Open in Maps</span>
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div
+                    class="w-full h-56 rounded-2xl overflow-hidden shadow-inner border border-rose-200/80 relative"
+                  >
+                    <iframe
+                      title="Sushi Tei Grand Indonesia Map"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.505703957416!2d106.8193850757308!3d-6.196803293790933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4219b1686c7%3A0xe744e825a2df46b1!2sSushi%20Tei%20Grand%20Indonesia!5e0!3m2!1sen!2sid!4v1715000000000!5m2!1sen!2sid"
+                      width="100%"
+                      height="100%"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      class="filter contrast-[1.02]"
+                    >
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Polaroid of First Meet -->
+              <div class="md:col-span-5 flex justify-center sticky top-24">
+                <div
+                  class="polaroid transform -rotate-2 hover:rotate-0 rounded-2xl w-full max-w-xs"
+                >
+                  <!-- Washi Tape -->
+                  <div class="washi-tape"></div>
+
+                  <!-- Photo Container -->
+                  <div
+                    class="w-full aspect-[3/4] bg-stone-100 rounded-xl overflow-hidden border border-stone-200 relative group cursor-pointer"
+                    onclick="openPhotoModal('assets/first-meet.jpg')"
+                  >
+                    <img
+                      id="first-meet-photo"
+                      src="assets/first-meet.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80'
+                      "
+                      alt="First Meet at Sushi Tei GI (1st Date)"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent pointer-events-none"
+                    ></div>
+                    <div
+                      class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-[10px] text-white px-2 py-0.5 rounded-full flex items-center gap-1 opacity-0 group-hover:opacity-100 transition"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                      Tap to enlarge
+                    </div>
+                  </div>
+
+                  <!-- Handwritten Caption -->
+                  <div class="mt-4 text-center">
+                    <p class="font-handwriting text-2xl text-stone-800">
+                      17 October • Sushi Tei GI (1st Date) ✨
+                    </p>
+                    <p
+                      class="text-[11px] text-stone-400 font-sans tracking-wide mt-0.5"
+                    >
+                      "The day my trembling hands met the sweetest smile."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 7: SECOND DATE AT TSM CIBUBUR      -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >07</span
+          >
+
+          <div class="relative z-10 space-y-8">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+              >
+                <span>A Warm Weekend Together</span>
+                <span>•</span>
+                <span class="text-rose-600 font-bold"
+                  >14 November • 2nd Date</span
+                >
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-5xl font-semibold text-rose-950"
+              >
+                Another Day I Didn't Want to End
+              </h2>
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                November 14 at Trans Studio Mall Cibubur — where every walk,
+                laugh, and shared smile felt even warmer and closer.
+              </p>
+            </div>
+
+            <!-- Content Grid: Story, Map, and Polaroid -->
+            <div class="grid md:grid-cols-12 gap-8 items-start pt-2">
+              <!-- Left Column: Story & Location Map -->
+              <div class="md:col-span-7 space-y-6">
+                <!-- Location Badge -->
+                <div
+                  class="flex items-start gap-4 bg-white/90 p-4 rounded-2xl border border-rose-100 shadow-sm"
+                >
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-600 text-white flex items-center justify-center flex-shrink-0 shadow-md shadow-rose-500/20"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span
+                      class="text-[10px] uppercase font-bold tracking-wider text-rose-500"
+                      >2nd Date Location</span
+                    >
+                    <h3 class="font-serif text-xl font-bold text-stone-900">
+                      Trans Studio Mall Cibubur
+                    </h3>
+                    <p class="text-xs text-stone-500 mt-0.5">
+                      Cibubur • November 14
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Romantic Story -->
+                <div
+                  class="space-y-3.5 text-stone-600 text-sm md:text-base leading-relaxed"
+                >
+                  <p>
+                    Getting to see you again for our second date was something I
+                    had quietly been anticipating all week.
+                  </p>
+                  <p>
+                    It was my very first time stepping foot in Trans Studio Mall
+                    Cibubur, while it was already your 3rd visit! But what made
+                    it so special was that there were so many thrilling rides
+                    and new attractions that you tried for the very first time
+                    with me.
+                  </p>
+                  <p>
+                    Watching your expressions, sharing that rush of excitement,
+                    and walking beside you felt so effortless and happy. I truly
+                    hope that day became a joyful and deeply memorable
+                    experience for you,
+                    <span class="font-korean font-semibold text-rose-950"
+                      >파니아</span
+                    >
+                    — because having you beside me made it a day I'll always
+                    cherish.
+                  </p>
+                </div>
+
+                <!-- Interactive Google Map Embed -->
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-stone-500"
+                  >
+                    <span
+                      class="font-medium text-rose-950 flex items-center gap-1.5"
+                    >
+                      <svg
+                        class="w-4 h-4 text-rose-500"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                        />
+                      </svg>
+                      Interactive Map: Trans Studio Mall Cibubur
+                    </span>
+                    <a
+                      href="https://maps.google.com/?q=Trans+Studio+Mall+Cibubur"
+                      target="_blank"
+                      class="text-rose-600 hover:underline flex items-center gap-1"
+                    >
+                      <span>Open in Maps</span>
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div
+                    class="w-full h-56 rounded-2xl overflow-hidden shadow-inner border border-rose-200/80 relative"
+                  >
+                    <iframe
+                      title="Trans Studio Mall Cibubur Map"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.253075217462!2d106.90159677573212!3d-6.361280393628796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ecdbad6e330f%3A0x6b4476059d67b2d5!2sTrans%20Studio%20Mall%20Cibubur!5e0!3m2!1sen!2sid!4v1715000000000!5m2!1sen!2sid"
+                      width="100%"
+                      height="100%"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      class="filter contrast-[1.02]"
+                    >
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Polaroid of Second Meet -->
+              <div class="md:col-span-5 flex justify-center sticky top-24">
+                <div
+                  class="polaroid transform rotate-2 hover:rotate-0 rounded-2xl w-full max-w-xs"
+                >
+                  <!-- Washi Tape -->
+                  <div class="washi-tape"></div>
+
+                  <!-- Photo Container -->
+                  <div
+                    class="w-full aspect-[3/4] bg-stone-100 rounded-xl overflow-hidden border border-stone-200 relative group cursor-pointer"
+                    onclick="openPhotoModal('assets/second-meet.jpg')"
+                  >
+                    <img
+                      id="second-meet-photo"
+                      src="assets/second-meet.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
+                      "
+                      alt="2nd Date at Trans Studio Mall Cibubur"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent pointer-events-none"
+                    ></div>
+                    <div
+                      class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-[10px] text-white px-2 py-0.5 rounded-full flex items-center gap-1 opacity-0 group-hover:opacity-100 transition"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                      Tap to enlarge
+                    </div>
+                  </div>
+
+                  <!-- Handwritten Caption -->
+                  <div class="mt-4 text-center">
+                    <p class="font-handwriting text-2xl text-stone-800">
+                      14 November • TSM Cibubur (2nd Date) 🌷
+                    </p>
+                    <p
+                      class="text-[11px] text-stone-400 font-sans tracking-wide mt-0.5"
+                    >
+                      "Every walk and laughter felt even warmer."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 8: THE SARI ROTI SRIKAYA MYSTERY   -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-amber-100/60 select-none pointer-events-none"
+            >08</span
+          >
+
+          <div class="relative z-10 space-y-6">
+            <div class="max-w-2xl">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-amber-600 font-semibold bg-amber-50 px-3 py-1 rounded-md mb-2 border border-amber-200/50"
+              >
+                <span>The Ride-Home Debate</span>
+                <span>•</span>
+                <span class="text-amber-700 font-bold"
+                  >The Legendary Bread Mystery 🍞🔍</span
+                >
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-stone-900"
+              >
+                Misteri "Sari Roti Bulat Srikaya"
+              </h2>
+              <p class="text-stone-500 text-xs italic">
+                (The legendary childhood snack that only exists in Vania's
+                memories)
+              </p>
+            </div>
+
+            <!-- Highlight Card -->
+            <div
+              class="grid md:grid-cols-12 gap-6 bg-gradient-to-br from-amber-50/50 via-white to-rose-50/40 rounded-3xl p-6 md:p-8 border border-amber-200/60 shadow-sm items-center"
+            >
+              <div class="md:col-span-8 space-y-4">
+                <div class="flex items-center gap-2 text-amber-600">
+                  <span class="text-2xl">🍞</span>
+                  <span class="text-xs uppercase font-bold tracking-wider"
+                    >Case File: 14 November 2026</span
+                  >
+                </div>
+
+                <h3
+                  class="font-serif text-2xl font-bold text-stone-900 leading-snug"
+                >
+                  "Kekeh banget ada Sari Roti bulat rasa srikaya pas kelas 1–4
+                  SD..."
+                </h3>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  On our way home from Trans Studio Mall Cibubur, we fell into
+                  the most hilarious and adorable debate. With absolute
+                  conviction and zero doubts in your eyes, you swore that Sari
+                  Roti definitely produced a round bun filled with sweet srikaya
+                  jam.
+                </p>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  You even recalled how you brought it to school practically
+                  every day back in 1st to 4th grade elementary school. It was
+                  your go-to comfort snack, etched deeply into your childhood
+                  memories!
+                </p>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  So what did we do? We pulled up Google and searched every
+                  corner of the internet together: old product line photos,
+                  supermarket archives, grocery forums...
+                  <strong class="text-stone-800"
+                    >and found absolutely zero results.</strong
+                  >
+                  😂
+                </p>
+
+                <p class="text-stone-600 text-sm leading-relaxed">
+                  Did it vanish into a parallel dimension? Was it an ultra-rare
+                  limited edition made exclusively for little
+                  <span class="font-korean font-semibold text-rose-950"
+                    >파니아</span
+                  >? Either way, seeing how fiercely and passionately you
+                  defended that mystery bread made me laugh and admire your
+                  cuteness even more.
+                </p>
+
+                <!-- Plot Twist Story: Sampai Kost Tetap Cari -->
+                <div
+                  class="bg-amber-50/70 p-3.5 rounded-2xl border border-amber-200 text-xs md:text-sm text-stone-700 space-y-1"
+                >
+                  <div
+                    class="flex items-center gap-1.5 font-bold text-amber-800 text-xs uppercase tracking-wider"
+                  >
+                    <span>🕵️‍♂️</span>
+                    <span>Plot Twist: Pantang Menyerah!</span>
+                  </div>
+                  <p class="leading-relaxed">
+                    Pas sampai kost, aku masih kepikiran dan lanjut investigasi
+                    sampai akhirnya...
+                    <strong>ketemu roti srikaya yang kumaksud!</strong> Langsung
+                    semangat kutunjukin ke kamu, tapi responmu malah:
+                    <em>"Yahh... bukan yang ini maksud akuuu..."</em> 🤣
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right Column: Fun Investigation Stamp / Search Result Box -->
+              <div
+                class="md:col-span-4 bg-white/90 rounded-2xl p-6 border border-amber-200 shadow-sm text-center space-y-4"
+              >
+                <!-- Bread Icon / Animation -->
+                <div
+                  class="w-16 h-16 mx-auto rounded-2xl bg-amber-100 flex items-center justify-center text-3xl shadow-inner"
+                >
+                  🍞
+                </div>
+
+                <!-- Clickable Fake Search Bar (Click to Reveal Discovered Bread) -->
+                <div
+                  id="roti-search-box"
+                  onclick="toggleRotiDiscovery()"
+                  class="bg-amber-50/80 hover:bg-amber-100 rounded-xl p-3 border border-amber-300 text-left space-y-1.5 cursor-pointer transition-all hover:scale-[1.02] shadow-sm group select-none"
+                  title="Click to see what Wildan found at his kost!"
+                >
+                  <div class="flex items-center justify-between">
+                    <div
+                      class="flex items-center gap-1.5 text-[11px] text-stone-600 font-mono"
+                    >
+                      <span>🔍</span>
+                      <span class="text-stone-800 font-semibold truncate"
+                        >"sari roti bulat srikaya"</span
+                      >
+                    </div>
+                    <span
+                      class="text-[9px] bg-rose-500 text-white font-bold px-1.5 py-0.5 rounded-full animate-pulse"
+                      >Click Me!</span
+                    >
+                  </div>
+                  <div
+                    class="text-[11px] text-rose-600 font-semibold flex items-center gap-1"
+                  >
+                    <span>⚠️ 0 results found on Google</span>
+                  </div>
+                  <div
+                    class="pt-1 border-t border-amber-200/80 flex items-center justify-between text-[10px] text-amber-900 font-medium"
+                  >
+                    <span>Tapi pas sampai kost ketemu?! 👀</span>
+                    <span
+                      class="group-hover:translate-x-0.5 transition-transform font-bold text-rose-600"
+                      >Buka di sini ➔</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Revealed Discovery Card (Toggles on click) -->
+                <div
+                  id="roti-discovery-card"
+                  class="hidden p-3.5 bg-gradient-to-br from-amber-50 to-orange-50/70 rounded-2xl border-2 border-dashed border-amber-300 text-center space-y-2.5 transition-all"
+                >
+                  <div
+                    class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-200/70 px-2.5 py-0.5 rounded-full"
+                  >
+                    <span>✨ Roti Srikaya yang Ditemukan</span>
+                  </div>
+
+                  <!-- Photo of discovered bread -->
+                  <div
+                    class="w-full aspect-[4/3] bg-stone-100 rounded-xl overflow-hidden border border-amber-200 shadow-sm relative group cursor-pointer"
+                    onclick="
+                      event.stopPropagation();
+                      openPhotoModal('assets/roti-srikaya.jpg');
+                    "
+                    title="Klik untuk perbesar foto"
+                  >
+                    <img
+                      id="roti-srikaya-photo"
+                      src="assets/roti-srikaya.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80'
+                      "
+                      alt="Roti Srikaya yang Ditemukan di Kost"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute bottom-1.5 right-1.5 bg-black/60 backdrop-blur-sm text-[9px] text-white px-2 py-0.5 rounded-full flex items-center gap-1"
+                    >
+                      <svg
+                        class="w-2.5 h-2.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                      Tap to zoom
+                    </div>
+                  </div>
+
+                  <p class="text-xs font-bold text-stone-800 leading-snug">
+                    "Sampai kost aku tetep cari dan ternyata ketemuu!"
+                  </p>
+
+                  <p
+                    class="text-[11px] text-rose-800 font-handwriting text-base leading-tight italic bg-white/90 p-2 rounded-xl border border-amber-100"
+                  >
+                    "Yahh... meskipun kamu bilang bukan yang ini yang kamu
+                    maksud 🤣"
+                  </p>
+
+                  <div class="text-[10px] text-stone-500 font-medium">
+                    Status:
+                    <span class="text-rose-600 font-bold">Ditolak 파니아</span>,
+                    tapi usahanya 100/100 ⭐
+                  </div>
+                </div>
+
+                <!-- Verdict Badge -->
+                <div class="space-y-1.5 pt-1">
+                  <span
+                    class="inline-block text-[10px] uppercase font-bold tracking-wider text-amber-700 bg-amber-100/70 px-2.5 py-1 rounded-full"
+                    >Official Verdict</span
+                  >
+                  <p
+                    class="text-xs font-handwriting text-lg text-rose-900 leading-tight"
+                  >
+                    "Even if Google says it never existed, if you say it did, I
+                    100% believe you, 파니아! 🤍"
+                  </p>
+                  <p
+                    class="text-[10px] text-stone-400 font-korean tracking-wide"
+                  >
+                    — 윌단
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 9: OUR PROGRESS TIMELINE           -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >09</span
+          >
+
+          <div class="relative z-10 space-y-10">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+              <div
+                class="inline-block text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+              >
+                How Far We've Walked
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                Our Journey & Milestones
+              </h2>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                From two strangers on an app to my favorite person in the entire
+                world.
+              </p>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div
+              class="relative border-l-2 border-rose-200/80 ml-4 md:ml-32 space-y-8 pl-6 md:pl-8"
+            >
+              <!-- Milestone 1 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-amber-400 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-amber-600 tracking-wider"
+                  >The First Match • Bumble</span
+                >
+                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
+                  Finding "Nisa" on Bumble
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  A simple swipe right that would soon change everything.
+                </p>
+              </div>
+
+              <!-- Milestone 2 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-blue-400 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-blue-600 tracking-wider"
+                  >20 September • LinkedIn</span
+                >
+                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
+                  Professional Mutuals
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  Connecting on LinkedIn and discovering how smart, capable, and
+                  inspiring you are.
+                </p>
+              </div>
+
+              <!-- Milestone 3 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-400 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-rose-500 tracking-wider"
+                  >21 September • Instagram</span
+                >
+                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
+                  Tapping "Follow" on @vaniacha_
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  Wildan finally pressing follow, hoping to get a chance to step
+                  into your world.
+                </p>
+              </div>
+
+              <!-- Milestone 4 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-500 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-rose-600 tracking-wider"
+                  >24 September • The First DM</span
+                >
+                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
+                  Cheerful First Chat & The Nailong Sticker
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  Breaking the ice with your remarkably cheerful energy and that
+                  unforgettable goofy Nailong yellow dragon sticker.
+                </p>
+              </div>
+
+              <!-- Milestone 5 (THE FIRST WHATSAPP CALL) -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-emerald-500 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-emerald-600 tracking-wider"
+                  >WhatsApp Voice Call • Saved as 파니아</span
+                >
+                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
+                  Late-Night Call on WhatsApp
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  From text messages to hours talking on WhatsApp. Hearing your
+                  warm, cheerful laugh and saving you as
+                  <strong class="font-korean text-rose-600">파니아</strong> in
+                  my phone.
+                </p>
+              </div>
+
+              <!-- Milestone 6 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-purple-500 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-purple-600 tracking-wider"
+                  >The Effort • Glasses Hunt</span
+                >
+                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
+                  The Great Glasses Search
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  Looking everywhere for identical frames to comfort you, before
+                  finding out they were at your house all along!
+                </p>
+              </div>
+
+              <!-- Milestone 7 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-600 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                >
+                  <div class="flex-1">
+                    <span
+                      class="text-xs uppercase font-semibold text-rose-700 tracking-wider"
+                      >17 October • 1st Date</span
+                    >
+                    <h4
+                      class="font-serif text-xl font-bold text-stone-900 mt-0.5"
+                    >
+                      Sushi Tei Grand Indonesia
+                    </h4>
+                    <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                      Sitting across from you with shaking hands and a heart
+                      that was falling fast.
+                    </p>
+                  </div>
+                  <!-- Photo Thumbnail -->
+                  <div
+                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 border-white shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition-transform relative group/thumb"
+                    onclick="openPhotoModal('assets/first-meet.jpg')"
+                    title="Click to view full photo"
+                  >
+                    <img
+                      src="assets/first-meet.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=400&q=80'
+                      "
+                      alt="1st Date at Sushi Tei GI"
+                      class="w-full h-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition flex items-center justify-center text-white"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 8 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-500 group-hover:scale-125 transition-transform shadow-sm"
+                ></span>
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                >
+                  <div class="flex-1">
+                    <span
+                      class="text-xs uppercase font-semibold text-rose-700 tracking-wider"
+                      >14 November • 2nd Date</span
+                    >
+                    <h4
+                      class="font-serif text-xl font-bold text-stone-900 mt-0.5"
+                    >
+                      Trans Studio Mall Cibubur
+                    </h4>
+                    <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                      My 1st visit & your 3rd, trying brand new thrilling rides
+                      together, followed by our hilarious ride-home search for
+                      the mythical "Sari Roti bulat srikaya".
+                    </p>
+                  </div>
+                  <!-- Photo Thumbnail -->
+                  <div
+                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 border-white shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition-transform relative group/thumb"
+                    onclick="openPhotoModal('assets/second-meet.jpg')"
+                    title="Click to view full photo"
+                  >
+                    <img
+                      id="second-meet-thumb"
+                      src="assets/second-meet.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80'
+                      "
+                      alt="2nd Date at TSM Cibubur"
+                      class="w-full h-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition flex items-center justify-center text-white"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 9 -->
+              <div class="relative group">
+                <span
+                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-pink-500 group-hover:scale-125 transition-transform ring-4 ring-pink-100"
+                ></span>
+                <span
+                  class="text-xs uppercase font-semibold text-rose-700 tracking-wider"
+                  >18 November • Today</span
+                >
+                <h4 class="font-serif text-xl font-bold text-rose-950 mt-0.5">
+                  Happy 23rd Birthday, 파니아!
+                </h4>
+                <p class="text-stone-600 text-sm leading-relaxed mt-1">
+                  Celebrating you today, and looking forward to every sweet
+                  memory yet to come.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 10: BIRTHDAY LOVE LETTER           -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="relative">
+          <div
+            class="glow-card rounded-3xl p-8 md:p-14 border border-rose-200 shadow-2xl relative overflow-hidden"
+          >
+            <div class="max-w-2xl mx-auto space-y-6 text-stone-800">
+              <!-- Header -->
+              <div class="border-b border-rose-200/60 pb-6 text-center">
+                <span
+                  class="text-xs uppercase tracking-widest text-rose-500 font-semibold"
+                  >From 윌단's Heart to Yours</span
+                >
+                <h2
+                  class="font-serif text-4xl md:text-5xl font-semibold text-rose-950 mt-1"
+                >
+                  Happy 23rd Birthday,
+                  <span class="font-korean text-rose-600">파니아</span>
+                </h2>
+                <p class="text-xs text-stone-400 mt-1">
+                  18 November 2003 — 18 November 2026
+                </p>
+              </div>
+
+              <!-- Letter Content (Pure Birthday Wishes & Prayers) -->
+              <div
+                class="space-y-5 font-serif text-lg md:text-xl leading-relaxed text-stone-700 italic"
+              >
+                <p>Dear Vania (파니아),</p>
+
+                <p>
+                  Happy 23rd Birthday to someone who brings so much gentle
+                  warmth and light into this world.
+                </p>
+
+                <p>
+                  On your special day, my deepest wish is that life treats you
+                  with the very same kindness, gentleness, and beauty that you
+                  give so effortlessly to everyone around you. I hope your 23rd
+                  year welcomes you with quiet peace in your heart, boundless
+                  health in your body, and sweet happiness that stays with you
+                  every single day.
+                </p>
+
+                <p>
+                  May all the quiet dreams and prayers you hold begin to unfold
+                  one by one. May you always find comfort whenever you feel
+                  tired, courage whenever you feel uncertain, and the steady
+                  reminder of just how strong, brilliant, and truly capable you
+                  are.
+                </p>
+
+                <p>
+                  Keep laughing as freely as you do, keep chasing what makes
+                  your eyes shine, and never lose that bright, radiant smile.
+                  Whatever new journeys this year brings, I hope you walk
+                  forward knowing that you are deeply cherished, respected, and
+                  always supported.
+                </p>
+
+                <p>
+                  Thank you for simply being you, 파니아. May your 23rd year be
+                  your most beautiful chapter yet.
+                </p>
+              </div>
+
+              <!-- Sign-off -->
+              <div class="pt-6 border-t border-rose-200/60">
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-stone-400">
+                    Forever cheering for you,
+                  </p>
+                  <p class="font-korean text-3xl font-bold text-rose-800 mt-1">
+                    윌단 ✨
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 11: INTERACTIVE BIRTHDAY CAKE      -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div
+          class="glow-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
+        >
+          <div class="max-w-lg mx-auto space-y-4">
+            <div
+              class="inline-block text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+            >
+              Turning 23
+            </div>
+            <h2
+              class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+            >
+              Make A Wish & Blow Out The Candles 🎂
+            </h2>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Close your eyes, make your deepest wish for your 23rd year, and
+              tap the candles to blow them out!
+            </p>
+
+            <!-- Interactive Cake -->
+            <div class="pt-6 pb-4 flex flex-col items-center justify-center">
+              <button
+                id="cake-button"
+                class="relative group focus:outline-none transition-transform hover:scale-105 active:scale-95"
+                title="Click to blow out the candles!"
+              >
+                <!-- Candle Flames -->
+                <div class="flex items-center justify-center gap-6 mb-1">
+                  <!-- Candle 1 -->
+                  <div class="flex flex-col items-center">
+                    <div
+                      class="w-3.5 h-6 bg-gradient-to-t from-amber-500 via-yellow-300 to-white rounded-full flame shadow-[0_0_15px_#f59e0b]"
+                    ></div>
+                    <div
+                      class="w-1.5 h-6 bg-rose-300 rounded-t-sm shadow-inner"
+                    ></div>
+                  </div>
+                  <!-- Candle 2 (Center) -->
+                  <div class="flex flex-col items-center -mt-2">
+                    <div
+                      class="w-4 h-7 bg-gradient-to-t from-amber-500 via-yellow-300 to-white rounded-full flame shadow-[0_0_18px_#f59e0b]"
+                    ></div>
+                    <div
+                      class="w-1.5 h-8 bg-amber-300 rounded-t-sm shadow-inner"
+                    ></div>
+                  </div>
+                  <!-- Candle 3 -->
+                  <div class="flex flex-col items-center">
+                    <div
+                      class="w-3.5 h-6 bg-gradient-to-t from-amber-500 via-yellow-300 to-white rounded-full flame shadow-[0_0_15px_#f59e0b]"
+                    ></div>
+                    <div
+                      class="w-1.5 h-6 bg-rose-300 rounded-t-sm shadow-inner"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Cake Tiers -->
+                <div
+                  class="w-52 h-14 bg-gradient-to-r from-rose-200 via-rose-100 to-rose-200 rounded-t-2xl shadow-md border-t-4 border-rose-300 flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="text-xs font-serif font-bold text-rose-800 tracking-wider"
+                  >
+                    VANIA • <span class="font-korean">파니아</span> • 23
+                  </span>
+                  <div
+                    class="absolute bottom-0 inset-x-0 h-2 bg-rose-300/40"
+                  ></div>
+                </div>
+                <div
+                  class="w-64 h-16 bg-gradient-to-r from-rose-300 via-rose-200 to-rose-300 rounded-b-2xl shadow-xl flex items-center justify-center border-t-2 border-rose-400/40 relative"
+                >
+                  <span
+                    class="text-xs tracking-widest text-rose-900 font-semibold uppercase"
+                    >✨ 18 November 2003 ✨</span
+                  >
+                </div>
+                <div
+                  class="w-72 h-3 bg-stone-200 rounded-full mx-auto -mt-1 shadow-md"
+                ></div>
+              </button>
+
+              <!-- Status message after blow out -->
+              <div
+                id="wish-message"
+                class="mt-6 opacity-0 transition-opacity duration-700"
+              >
+                <div
+                  class="inline-block bg-rose-500 text-white px-6 py-3 rounded-full text-sm font-medium shadow-lg shadow-rose-500/30 animate-pulse"
+                >
+                  ✨ May all your secret prayers & dreams come true, 파니아!
+                  Happy 23rd! ✨
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 12: LITTLE TRUTHS (INTERACTIVE CARDS)-->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="text-center max-w-xl mx-auto space-y-2 mb-8">
+          <div
+            class="inline-block text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+          >
+            Just In Case You Forget
+          </div>
+          <h2
+            class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+          >
+            Little Truths About You
+          </h2>
+          <p class="text-stone-500 text-sm">
+            Click each card to reveal a secret reminder 💌
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <!-- Card 1 -->
+          <div
+            onclick="flipCard(this)"
+            class="cursor-pointer glow-card p-6 rounded-2xl border border-rose-100 hover:border-rose-300 transition-all hover:-translate-y-1 group"
+          >
+            <div class="text-3xl mb-3">🌙</div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">
+              When You Feel Tired
+            </h3>
+            <p
+              class="text-xs text-stone-500 mt-2 card-hint group-hover:text-rose-500 transition"
+            >
+              Tap to read...
+            </p>
+            <p
+              class="text-xs text-rose-800 font-handwriting text-lg leading-snug mt-2 hidden card-content"
+            >
+              Take a deep breath and rest. You don't have to carry everything by
+              yourself. You are doing wonderfully,
+              <span class="font-korean">파니아</span>.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            onclick="flipCard(this)"
+            class="cursor-pointer glow-card p-6 rounded-2xl border border-rose-100 hover:border-rose-300 transition-all hover:-translate-y-1 group"
+          >
+            <div class="text-3xl mb-3">🌷</div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">
+              Your Smile at Sushi Tei
+            </h3>
+            <p
+              class="text-xs text-stone-500 mt-2 card-hint group-hover:text-rose-500 transition"
+            >
+              Tap to read...
+            </p>
+            <p
+              class="text-xs text-rose-800 font-handwriting text-lg leading-snug mt-2 hidden card-content"
+            >
+              That smile you gave me on October 17 could heal anything. Keep
+              smiling like that as often as you can!
+            </p>
+          </div>
+
+          <!-- Card 3: Wasabi Lover Fact -->
+          <div
+            onclick="flipCard(this)"
+            class="cursor-pointer glow-card p-6 rounded-2xl border border-rose-100 hover:border-rose-300 transition-all hover:-translate-y-1 group"
+          >
+            <div class="text-3xl mb-3">🍣</div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">
+              First Wasabi Lover
+            </h3>
+            <p
+              class="text-xs text-stone-500 mt-2 card-hint group-hover:text-rose-500 transition"
+            >
+              Tap to read...
+            </p>
+            <p
+              class="text-xs text-rose-800 font-handwriting text-lg leading-snug mt-2 hidden card-content"
+            >
+              A fun little fact: You are officially the very first wasabi lover
+              I've ever known in my life! Seeing you enjoy it so effortlessly
+              was both surprising and really adorable. 🥢✨
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            onclick="flipCard(this)"
+            class="cursor-pointer glow-card p-6 rounded-2xl border border-rose-100 hover:border-rose-300 transition-all hover:-translate-y-1 group"
+          >
+            <div class="text-3xl mb-3">👓</div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">
+              Lost Glasses Reminder
+            </h3>
+            <p
+              class="text-xs text-stone-500 mt-2 card-hint group-hover:text-rose-500 transition"
+            >
+              Tap to read...
+            </p>
+            <p
+              class="text-xs text-rose-800 font-handwriting text-lg leading-snug mt-2 hidden card-content"
+            >
+              Whenever you misplace something, check your house first! But know
+              that I'll always be ready to search the world for you anyway.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            onclick="flipCard(this)"
+            class="cursor-pointer glow-card p-6 rounded-2xl border border-rose-100 hover:border-rose-300 transition-all hover:-translate-y-1 group"
+          >
+            <div class="text-3xl mb-3">✨</div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">
+              A Little Truth
+            </h3>
+            <p
+              class="text-xs text-stone-500 mt-2 card-hint group-hover:text-rose-500 transition"
+            >
+              Tap to read...
+            </p>
+            <p
+              class="text-xs text-rose-800 font-handwriting text-lg leading-snug mt-2 hidden card-content"
+            >
+              You have this effortless way of making everything feel brighter
+              and more peaceful just by being yourself. I'm so grateful to meet
+              you in my life,
+              <span class="font-korean">파니아</span>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 13: A SAFE SPACE FOR YOUR THOUGHTS -->
+      <!-- (REFLECTION & HONEST NOTE FOR WILDAN)      -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20" id="reflection-section">
+        <div class="glow-card rounded-3xl p-6 md:p-12 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
+            >13</span
+          >
+
+          <div class="relative z-10 max-w-2xl mx-auto space-y-8">
+            <!-- Header -->
+            <div class="text-center space-y-3">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
+              >
+                <span>Your Turn</span>
+                <span>•</span>
+                <span class="text-rose-600 font-bold"
+                  >A Gentle Space For You</span
+                >
+              </div>
+
+              <h2
+                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
+              >
+                Thoughts & Reflection For Me 💭
+              </h2>
+
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Every connection is a two-way street. Getting to know you has
+                brought so much warmth to my days, but I want to make sure you
+                always feel heard, respected, and comfortable. Here is a
+                completely safe space for your honest thoughts — zero pressure,
+                no right or wrong words.
+              </p>
+            </div>
+
+            <!-- Reflection Form Card -->
+            <div
+              class="bg-white/95 rounded-2xl p-6 md:p-8 border border-rose-100 shadow-sm space-y-6"
+            >
+              <!-- 1. Vibe Selection -->
+              <div class="space-y-2">
+                <label
+                  class="block text-xs font-semibold uppercase tracking-wider text-stone-500"
+                >
+                  How has it felt getting to know me so far?
+                  <span class="text-rose-400 font-normal"
+                    >(tap whatever resonates)</span
+                  >
+                </label>
+                <div class="flex flex-wrap gap-2 pt-1" id="vibe-tags">
+                  <button
+                    type="button"
+                    onclick="toggleVibeTag(this)"
+                    class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-200 bg-stone-50 hover:bg-rose-50 hover:border-rose-300 text-stone-700 transition"
+                  >
+                    🌸 Warm & Comforting
+                  </button>
+                  <button
+                    type="button"
+                    onclick="toggleVibeTag(this)"
+                    class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-200 bg-stone-50 hover:bg-rose-50 hover:border-rose-300 text-stone-700 transition"
+                  >
+                    ☕ Always easy to talk to
+                  </button>
+                  <button
+                    type="button"
+                    onclick="toggleVibeTag(this)"
+                    class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-200 bg-stone-50 hover:bg-rose-50 hover:border-rose-300 text-stone-700 transition"
+                  >
+                    😄 Makes me laugh
+                  </button>
+                  <button
+                    type="button"
+                    onclick="toggleVibeTag(this)"
+                    class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-200 bg-stone-50 hover:bg-rose-50 hover:border-rose-300 text-stone-700 transition"
+                  >
+                    🤍 Safe & Respectful
+                  </button>
+                  <button
+                    type="button"
+                    onclick="toggleVibeTag(this)"
+                    class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-stone-200 bg-stone-50 hover:bg-rose-50 hover:border-rose-300 text-stone-700 transition"
+                  >
+                    ✨ Thoughtful & Attentive
+                  </button>
+                </div>
+              </div>
+
+              <!-- 2. Question: Favorite Memory -->
+              <div class="space-y-1.5">
+                <label
+                  for="input-memory"
+                  class="block text-xs font-semibold text-stone-700"
+                >
+                  1. A favorite memory or moment of ours that made you smile:
+                </label>
+                <input
+                  type="text"
+                  id="input-memory"
+                  placeholder="e.g. Sushi Tei GI, TSM Cibubur rides, the mystery Sari Roti srikaya, or the glasses mission..."
+                  class="w-full text-sm px-4 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-rose-300 transition"
+                />
+              </div>
+
+              <!-- 3. Question: Feedback / Reflection -->
+              <div class="space-y-1.5">
+                <label
+                  for="input-feedback"
+                  class="block text-xs font-semibold text-stone-700"
+                >
+                  2. Honest advice, reflection, or something you appreciate
+                  about me:
+                </label>
+                <textarea
+                  id="input-feedback"
+                  rows="3"
+                  placeholder="Tell me anything honestly — what you appreciate, or anything you'd like me to know/improve..."
+                  class="w-full text-sm px-4 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-rose-300 transition"
+                ></textarea>
+              </div>
+
+              <!-- 4. Question: Open Message -->
+              <div class="space-y-1.5">
+                <label
+                  for="input-message"
+                  class="block text-xs font-semibold text-stone-700"
+                >
+                  3. A wish or anything else you'd like to say:
+                </label>
+                <textarea
+                  id="input-message"
+                  rows="2"
+                  placeholder="Anything from your heart..."
+                  class="w-full text-sm px-4 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-rose-300 transition"
+                ></textarea>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <button
+                  type="button"
+                  onclick="sendReflectionWA()"
+                  class="w-full sm:flex-1 py-3 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium text-xs tracking-wide shadow-md shadow-emerald-600/20 hover:scale-[1.01] active:scale-[0.99] transition flex items-center justify-center gap-2"
+                >
+                  <span>Send to 윌단 on WhatsApp</span>
+                  <span>💬</span>
+                </button>
+
+                <button
+                  type="button"
+                  onclick="copyReflection()"
+                  class="w-full sm:w-auto py-3 px-4 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-medium text-xs transition flex items-center justify-center gap-1.5"
+                >
+                  <span>Copy Note</span>
+                  <span>📋</span>
+                </button>
+
+                <button
+                  type="button"
+                  onclick="saveReflectionLocal()"
+                  class="w-full sm:w-auto py-3 px-4 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium text-xs transition flex items-center justify-center gap-1.5"
+                >
+                  <span>Save Here</span>
+                  <span>💌</span>
+                </button>
+              </div>
+
+              <!-- Toast / Confirmation message -->
+              <div
+                id="reflection-toast"
+                class="hidden p-4 rounded-xl bg-rose-50 border border-rose-200 text-center text-xs text-rose-900 animate-fadeIn"
+              >
+                <p
+                  class="font-handwriting text-xl text-rose-800"
+                  id="toast-title"
+                >
+                  Thank you so much, 파니아 🤍
+                </p>
+                <p class="text-stone-600 mt-1" id="toast-desc">
+                  Your thoughts mean the world to me. I'm always here to listen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- FOOTER                                     -->
+      <!-- ========================================== -->
+      <footer
+        class="text-center pt-12 pb-8 border-t border-rose-200/50 space-y-3"
+      >
+        <p class="font-serif text-2xl text-rose-950">
+          Happy 23rd Birthday, Vania
+          <span class="font-korean text-rose-600">(파니아)</span> 🌸
+        </p>
+        <p class="text-xs text-stone-500">
+          Made with endless care and quiet love by
+          <span class="font-korean font-medium text-rose-800">윌단</span>.
+        </p>
+        <div class="pt-2 text-rose-400 text-sm">✨ 💖 ✨</div>
+      </footer>
+    </main>
+
+    <!-- ======================================================== -->
+    <!-- LIGHTBOX MODAL FOR CHAT SCREENSHOT                       -->
+    <!-- ======================================================== -->
+    <div
+      id="photo-modal"
+      class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4"
+      onclick="closePhotoModal()"
+    >
+      <div
+        class="relative max-w-lg w-full bg-white rounded-3xl overflow-hidden p-3 shadow-2xl"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-stone-900/60 text-white flex items-center justify-center hover:bg-stone-900"
+          onclick="closePhotoModal()"
+        >
+          ✕
+        </button>
+        <img
+          id="modal-img"
+          src=""
+          alt="First Chat Full"
+          class="w-full max-h-[80vh] object-contain rounded-2xl"
+        />
+        <p class="text-center text-xs text-stone-500 mt-2">
+          First Instagram Chat • 24 September
+        </p>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- JAVASCRIPT LOGIC                                         -->
+    <!-- ======================================================== -->
+    <script>
+      // --- Canvas Floating Hearts & Petals Animation ---
+      const canvas = document.getElementById("ambient-canvas");
+      const ctx = canvas.getContext("2d");
+      let particles = [];
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * -canvas.height;
+          this.size = Math.random() * 8 + 6;
+          this.speedY = Math.random() * 0.8 + 0.4;
+          this.speedX = (Math.random() - 0.5) * 0.5;
+          this.opacity = Math.random() * 0.5 + 0.2;
+          this.isHeart = Math.random() > 0.5;
+          this.rotation = Math.random() * Math.PI * 2;
+          this.rotSpeed = (Math.random() - 0.5) * 0.02;
+        }
+        update() {
+          this.y += this.speedY;
+          this.x += this.speedX;
+          this.rotation += this.rotSpeed;
+          if (this.y > canvas.height + 20) {
+            this.reset();
+            this.y = -20;
+          }
+        }
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rotation);
+          ctx.fillStyle = `rgba(244, 63, 94, ${this.opacity})`;
+
+          if (this.isHeart) {
+            const s = this.size / 15;
+            ctx.beginPath();
+            ctx.moveTo(0, -5 * s);
+            ctx.bezierCurveTo(-10 * s, -15 * s, -20 * s, 2 * s, 0, 15 * s);
+            ctx.bezierCurveTo(20 * s, 2 * s, 10 * s, -15 * s, 0, -5 * s);
+            ctx.fill();
+          } else {
+            ctx.beginPath();
+            ctx.arc(0, 0, this.size / 3, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+      }
+
+      for (let i = 0; i < 28; i++) {
+        const p = new Particle();
+        p.y = Math.random() * canvas.height;
+        particles.push(p);
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p) => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
+
+      // --- Audio Player Controller ---
+      const audio = document.getElementById("bg-audio");
+      const toggleBtn = document.getElementById("toggle-audio-btn");
+      const playIcon = document.getElementById("play-icon");
+      const pauseIcon = document.getElementById("pause-icon");
+      const musicStatus = document.getElementById("music-status");
+      const vinylIcon = document.getElementById("vinyl-icon");
+      let isPlaying = false;
+      let audioBlobReady = false;
+
+      // Load audio as Blob URL to bypass file:// protocol autoplay restriction
+      function loadAudioBlob(src) {
+        fetch(src)
+          .then((r) => {
+            if (!r.ok) throw new Error("fetch failed: " + src);
+            return r.blob();
+          })
+          .then((blob) => {
+            audio.src = URL.createObjectURL(blob);
+            audio.load();
+            audioBlobReady = true;
+          })
+          .catch(() => {
+            // fallback: keep original src, browser may still allow it
+            audioBlobReady = true;
+          });
+      }
+
+      // Try assets/ first, fallback to root
+      loadAudioBlob("assets/tsunami.mp3");
+
+      function playAudio() {
+        const tryPlay = () => {
+          audio
+            .play()
+            .then(() => {
+              isPlaying = true;
+              playIcon.classList.add("hidden");
+              pauseIcon.classList.remove("hidden");
+              musicStatus.textContent = "Playing ♫";
+              vinylIcon.classList.add("spinning");
+            })
+            .catch((err) => {
+              console.log("Audio play error:", err);
+              musicStatus.textContent = "♫";
+            });
+        };
+
+        if (audioBlobReady) {
+          tryPlay();
+        } else {
+          // Wait for blob to load then play
+          const wait = setInterval(() => {
+            if (audioBlobReady) {
+              clearInterval(wait);
+              tryPlay();
+            }
+          }, 100);
+        }
+      }
+
+      function pauseAudio() {
+        audio.pause();
+        isPlaying = false;
+        playIcon.classList.remove("hidden");
+        pauseIcon.classList.add("hidden");
+        musicStatus.textContent = "Paused";
+        vinylIcon.classList.remove("spinning");
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        if (isPlaying) {
+          pauseAudio();
+        } else {
+          playAudio();
+        }
+      });
+
+      // --- Entrance Envelope Unlock ---
+      const introModal = document.getElementById("intro-modal");
+      const openGiftBtn = document.getElementById("open-gift-btn");
+
+      openGiftBtn.addEventListener("click", () => {
+        playAudio();
+
+        if (typeof confetti === "function") {
+          confetti({
+            particleCount: 70,
+            spread: 70,
+            origin: { y: 0.6 },
+          });
+        }
+
+        introModal.style.opacity = "0";
+        setTimeout(() => {
+          introModal.style.display = "none";
+        }, 1000);
+      });
+
+      // --- Interactive Cake & Candle Blow Out ---
+      const cakeBtn = document.getElementById("cake-button");
+      const flames = document.querySelectorAll(".flame");
+      const wishMessage = document.getElementById("wish-message");
+      let blownOut = false;
+
+      cakeBtn.addEventListener("click", () => {
+        if (blownOut) return;
+        blownOut = true;
+
+        flames.forEach((f) => f.classList.add("extinguished"));
+
+        wishMessage.classList.remove("opacity-0");
+        wishMessage.classList.add("opacity-100");
+
+        if (typeof confetti === "function") {
+          const count = 220;
+          const defaults = { origin: { y: 0.7 } };
+
+          function fire(particleRatio, opts) {
+            confetti(
+              Object.assign({}, defaults, opts, {
+                particleCount: Math.floor(count * particleRatio),
+              }),
+            );
+          }
+
+          fire(0.25, { spread: 26, startVelocity: 55 });
+          fire(0.2, { spread: 60 });
+          fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+          fire(0.1, {
+            spread: 120,
+            startVelocity: 25,
+            decay: 0.92,
+            scalar: 1.2,
+          });
+          fire(0.1, { spread: 120, startVelocity: 45 });
+        }
+      });
+
+      // --- Card Reveal Logic ---
+      function flipCard(el) {
+        const hint = el.querySelector(".card-hint");
+        const content = el.querySelector(".card-content");
+        if (hint && content) {
+          hint.classList.toggle("hidden");
+          content.classList.toggle("hidden");
+        }
+      }
+
+      // --- Sari Roti Discovery Toggle ---
+      function toggleRotiDiscovery() {
+        const card = document.getElementById("roti-discovery-card");
+        if (card) {
+          card.classList.toggle("hidden");
+          if (!card.classList.contains("hidden")) {
+            if (typeof confetti === "function") {
+              confetti({
+                particleCount: 30,
+                spread: 45,
+                origin: { y: 0.65 },
+              });
+            }
+          }
+        }
+      }
+
+      // --- Lightbox Modal ---
+      function openPhotoModal(src) {
+        const modal = document.getElementById("photo-modal");
+        const modalImg = document.getElementById("modal-img");
+        modalImg.src =
+          src ||
+          (document.getElementById("chat-photo")
+            ? document.getElementById("chat-photo").src
+            : "");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closePhotoModal() {
+        const modal = document.getElementById("photo-modal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      // --- Feedback & Reflection Handlers ---
+      let selectedVibes = [];
+
+      function toggleVibeTag(btn) {
+        const text = btn.innerText.trim();
+        const idx = selectedVibes.indexOf(text);
+        if (idx > -1) {
+          selectedVibes.splice(idx, 1);
+          btn.classList.remove("bg-rose-500", "text-white", "border-rose-500");
+          btn.classList.add(
+            "bg-stone-50",
+            "text-stone-700",
+            "border-stone-200",
+          );
+        } else {
+          selectedVibes.push(text);
+          btn.classList.remove(
+            "bg-stone-50",
+            "text-stone-700",
+            "border-stone-200",
+          );
+          btn.classList.add("bg-rose-500", "text-white", "border-rose-500");
+        }
+      }
+
+      function buildReflectionText() {
+        const memory = document.getElementById("input-memory").value.trim();
+        const feedback = document.getElementById("input-feedback").value.trim();
+        const message = document.getElementById("input-message").value.trim();
+
+        let text = "✨ Reflection & Note from Vania (파니아) ✨\n\n";
+        if (selectedVibes.length > 0) {
+          text +=
+            "🌿 How it felt knowing you:\n" + selectedVibes.join(", ") + "\n\n";
+        }
+        if (memory) {
+          text += "💭 Favorite moment/memory:\n" + memory + "\n\n";
+        }
+        if (feedback) {
+          text +=
+            "🤍 Honest thought / reflection for you:\n" + feedback + "\n\n";
+        }
+        if (message) {
+          text += "💌 Message / wish:\n" + message + "\n\n";
+        }
+        if (!memory && !feedback && !message && selectedVibes.length === 0) {
+          text += "(Vania checked in with warmth and love ✨)\n";
+        }
+        return text;
+      }
+
+      function showReflectionToast(title, desc) {
+        const toast = document.getElementById("reflection-toast");
+        const titleEl = document.getElementById("toast-title");
+        const descEl = document.getElementById("toast-desc");
+        titleEl.textContent = title;
+        descEl.textContent = desc;
+        toast.classList.remove("hidden");
+      }
+
+      function sendReflectionWA() {
+        const text = buildReflectionText();
+        const url =
+          "https://api.whatsapp.com/send?phone=6288235834133&text=" +
+          encodeURIComponent(text);
+        window.open(url, "_blank");
+        showReflectionToast(
+          "Opening WhatsApp... 💬",
+          "Thank you for sharing your thoughts with me, 파니아!",
+        );
+      }
+
+      function copyReflection() {
+        const text = buildReflectionText();
+        if (navigator.clipboard) {
+          navigator.clipboard
+            .writeText(text)
+            .then(() => {
+              showReflectionToast(
+                "Note copied to clipboard! 📋",
+                "You can paste and send it to 윌단 anytime 🤍",
+              );
+            })
+            .catch(() => {
+              showReflectionToast(
+                "Note ready! 🤍",
+                "Thank you for writing this.",
+              );
+            });
+        } else {
+          showReflectionToast("Note ready! 🤍", "Thank you for writing this.");
+        }
+      }
+
+      function saveReflectionLocal() {
+        const memory = document.getElementById("input-memory").value.trim();
+        const feedback = document.getElementById("input-feedback").value.trim();
+        const message = document.getElementById("input-message").value.trim();
+        try {
+          localStorage.setItem(
+            "vania_reflection",
+            JSON.stringify({
+              vibes: selectedVibes,
+              memory,
+              feedback,
+              message,
+              date: new Date().toISOString(),
+            }),
+          );
+        } catch (e) {}
+        showReflectionToast(
+          "Note saved with love 💌",
+          "Thank you for being open and honest with me, 파니아. Every word matters.",
+        );
+      }
+    </script>
+  </body>
+</html>
