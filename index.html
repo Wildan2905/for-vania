@@ -1564,13 +1564,173 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 8: THE SARI ROTI SRIKAYA MYSTERY   -->
+      <!-- CHAPTER 8: THE FIRST LRT RIDE TOGETHER     -->
+      <!-- ========================================== -->
+      <section class="scroll-mt-20">
+        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
+          <span
+            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-teal-100/60 select-none pointer-events-none"
+            >08</span
+          >
+
+          <div class="relative z-10 space-y-8">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+              <div
+                class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-teal-600 font-semibold bg-teal-50 px-3 py-1 rounded-md border border-teal-200/50"
+              >
+                <span>Our Little Adventures</span>
+                <span>•</span>
+                <span class="text-teal-700 font-bold">Stasiun Cikoko & LRT Journey 🚆</span>
+              </div>
+              <h2
+                class="font-serif text-3xl md:text-5xl font-semibold text-rose-950"
+              >
+                The First LRT Ride Together
+              </h2>
+              <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                Dan cerita perkenalan pertamaku dengan stasiun dan daerah bernama Cikoko.
+              </p>
+            </div>
+
+            <!-- Content Grid: Story & Polaroid -->
+            <div class="grid md:grid-cols-12 gap-8 items-start pt-2">
+              <!-- Left Column: Story & Cute LRT Transit Ticket Card -->
+              <div class="md:col-span-7 space-y-6">
+                <!-- Transit Station Badge -->
+                <div
+                  class="flex items-start gap-4 bg-white/90 p-4 rounded-2xl border border-teal-100 shadow-sm"
+                >
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-600 text-white flex items-center justify-center flex-shrink-0 shadow-md shadow-teal-500/20 text-2xl"
+                  >
+                    🚆
+                  </div>
+                  <div>
+                    <span
+                      class="text-[10px] uppercase font-bold tracking-wider text-teal-600"
+                      >Transit Memory</span
+                    >
+                    <h3 class="font-serif text-xl font-bold text-stone-900">
+                      LRT Jabodebek • Stasiun Cikoko
+                    </h3>
+                    <p class="text-xs text-stone-500 mt-0.5">
+                      Jakarta Transit • First Experience
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Story Text -->
+                <div
+                  class="space-y-3.5 text-stone-600 text-sm md:text-base leading-relaxed"
+                >
+                  <p>
+                    Thanks ya sudah mengenalkan LRT ke aku, dan ngasih tahu aku kalau ada daerah bernama <strong>Cikoko</strong>!
+                  </p>
+                  <p>
+                    Jujur, sebelumnya aku belum pernah dan jarang banget kepikiran buat naik LRT, apalagi tahu seluk-beluk stasiun Cikoko. Tapi merasakan naik LRT pertama kali bareng kamu — berdiri atau duduk berdampingan sambil ngobrol santai sepanjang jalur rel — ternyata jadi pengalaman yang hangat dan nyenengin banget.
+                  </p>
+                  <p class="bg-teal-50/70 p-4 rounded-2xl border border-teal-200/70 text-teal-950 font-medium">
+                    Mungkin ke depan aku bakal jauh lebih sering menggunakan LRT... karena setiap kali naik LRT, pasti akan selalu bikin aku teringat sama momen-momen manis bareng kamu, <span class="font-korean font-semibold text-rose-800">파니아</span>. 🚆🤍
+                  </p>
+                </div>
+
+                <!-- Cute Boarding Pass Card -->
+                <div
+                  class="bg-gradient-to-r from-teal-600 to-emerald-700 rounded-2xl p-4 text-white shadow-md relative overflow-hidden"
+                >
+                  <div class="absolute -right-6 -bottom-6 text-7xl opacity-10 select-none">
+                    🚆
+                  </div>
+                  <div class="flex items-center justify-between border-b border-white/20 pb-2 mb-3">
+                    <span class="text-[10px] tracking-widest uppercase font-mono text-teal-200">SPECIAL TRANSIT PASS</span>
+                    <span class="text-xs font-korean font-semibold">윌단 & 파니아</span>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4 text-xs font-mono">
+                    <div>
+                      <span class="text-[10px] text-teal-200 block">DESTINATION</span>
+                      <span class="font-bold text-sm tracking-wide">CIKOKO STATION</span>
+                    </div>
+                    <div>
+                      <span class="text-[10px] text-teal-200 block">MEMORY STATUS</span>
+                      <span class="font-bold text-sm tracking-wide text-emerald-200">UNFORGETTABLE ✨</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Polaroid of First LRT Ride -->
+              <div class="md:col-span-5 flex justify-center sticky top-24">
+                <div
+                  class="polaroid transform rotate-1 hover:rotate-0 rounded-2xl w-full max-w-xs transition-transform"
+                >
+                  <!-- Washi Tape -->
+                  <div class="washi-tape"></div>
+
+                  <!-- Photo Container -->
+                  <div
+                    class="w-full aspect-[3/4] bg-stone-100 rounded-xl overflow-hidden border border-stone-200 relative group cursor-pointer"
+                    onclick="openPhotoModal('assets/first-lrt.jpg')"
+                  >
+                    <img
+                      id="first-lrt-photo"
+                      src="assets/first-lrt.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80'
+                      "
+                      alt="Foto Bareng Pertama di LRT"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent pointer-events-none"
+                    ></div>
+                    <div
+                      class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-[10px] text-white px-2 py-0.5 rounded-full flex items-center gap-1 opacity-0 group-hover:opacity-100 transition"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                      Tap to enlarge
+                    </div>
+                  </div>
+
+                  <!-- Handwritten Caption -->
+                  <div class="mt-4 text-center">
+                    <p class="font-handwriting text-2xl text-stone-800">
+                      First LRT Ride • Cikoko 🚆✨
+                    </p>
+                    <p
+                      class="text-[11px] text-stone-400 font-sans tracking-wide mt-0.5"
+                    >
+                      "Foto bareng pertama kita di LRT."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CHAPTER 9: THE SARI ROTI SRIKAYA MYSTERY   -->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
           <span
             class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-amber-100/60 select-none pointer-events-none"
-            >08</span
+            >09</span
           >
 
           <div class="relative z-10 space-y-6">
@@ -1810,7 +1970,7 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 9: BIRTHDAY LOVE LETTER           -->
+      <!-- CHAPTER 10: BIRTHDAY LOVE LETTER           -->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div class="relative">
@@ -1898,7 +2058,7 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 10: INTERACTIVE BIRTHDAY CAKE      -->
+      <!-- CHAPTER 11: INTERACTIVE BIRTHDAY CAKE      -->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div
@@ -2002,7 +2162,7 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 11: LITTLE TRUTHS (INTERACTIVE CARDS)-->
+      <!-- CHAPTER 12: LITTLE TRUTHS (INTERACTIVE CARDS)-->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div class="text-center max-w-xl mx-auto space-y-2 mb-8">
@@ -2139,14 +2299,14 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 12: A SAFE SPACE FOR YOUR THOUGHTS -->
+      <!-- CHAPTER 13: A SAFE SPACE FOR YOUR THOUGHTS -->
       <!-- (REFLECTION & HONEST NOTE FOR WILDAN)      -->
       <!-- ========================================== -->
       <section class="scroll-mt-20" id="reflection-section">
         <div class="glow-card rounded-3xl p-6 md:p-12 relative overflow-hidden">
           <span
             class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
-            >12</span
+            >13</span
           >
 
           <div class="relative z-10 max-w-2xl mx-auto space-y-8">
@@ -2241,7 +2401,7 @@
                 <input
                   type="text"
                   id="input-memory"
-                  placeholder="e.g. Sushi Tei GI, TSM Cibubur rides, the mystery Sari Roti srikaya, or the glasses mission..."
+                  placeholder="e.g. Sushi Tei GI, our first LRT ride to Cikoko, TSM Cibubur rides, or the mystery Sari Roti..."
                   class="w-full text-sm px-4 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-rose-300 transition"
                 />
               </div>
