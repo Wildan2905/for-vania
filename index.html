@@ -368,7 +368,7 @@
             href="#chapter-origin"
             class="inline-flex flex-col items-center text-xs text-rose-400 hover:text-rose-600 transition gap-2 group"
           >
-            <span>Walk through our timeline</span>
+            <span>Begin our story</span>
             <svg
               class="w-4 h-4 animate-bounce text-rose-500"
               fill="none"
@@ -415,7 +415,7 @@
               <p class="text-stone-600 text-sm md:text-base leading-relaxed">
                 Our story started with a fateful swipe on Bumble. Back then,
                 your profile said <strong>"Nisa"</strong>, but you immediately
-                caught my attention with that radiant aura.
+                caught my attention with selempang yang kamu pakai.
               </p>
 
               <p class="text-stone-600 text-sm md:text-base leading-relaxed">
@@ -600,10 +600,9 @@
               </h2>
 
               <p class="text-stone-600 text-sm md:text-base leading-relaxed">
-                Three days after I followed you, on
-                <strong>September 24</strong>, the silence broke. I remember
-                checking my phone nervously, holding my breath, and finally
-                sliding into your DMs.
+                Three days after connecting on LinkedIn, on
+                <strong>September 24</strong>, our conversation began to flow.
+                I remember checking my phone excitedly for every message and notification from you.
               </p>
 
               <p class="text-stone-600 text-sm md:text-base leading-relaxed">
@@ -654,7 +653,7 @@
                 Out of all the stickers in the universe, the very first sticker
                 you sent me was <strong>Nailong</strong> (奶龙)! That chubby,
                 goofy, delightfully cheerful yellow dinosaur matched your bubbly
-                personality so effortlessly.
+                personality so effortlessly — pantes aja temen-temen kamu selalu inget kamu setiap kali melihat Nailong! 😂💛
               </p>
               <p class="text-stone-600 text-sm md:text-base leading-relaxed">
                 Seeing Nailong pop up in our chat made me laugh out loud. It
@@ -939,7 +938,7 @@
                 Your voice was even more joyful and warm than I could have
                 imagined. We ended up talking for hours into the quiet of the
                 night — and when we finally had to hang up, I just couldn't stop
-                smiling.
+                smiling. Dan terima kasih banyak ya, sudah selalu menjadi alarm terbaik untuk tiap pagiku! ⏰☀️
               </p>
 
               <div
@@ -1147,6 +1146,9 @@
                     your real-life warmth, the gentle way you spoke, and that
                     sweet smile sitting right across from me.
                   </p>
+                  <p class="bg-rose-50/70 p-3.5 rounded-2xl border border-rose-100 text-rose-900 font-medium">
+                    Banyak makanan-makanan yang belum pernah aku coba sebelumnya. Dan sejujurnya, aku sangat berharap kamu adalah orang yang bakal terus menemaniku mencoba berbagai makanan baru sebanyak mungkin ke depannya! 🍣🥢✨
+                  </p>
                 </div>
 
                 <!-- Interactive Google Map Embed -->
@@ -1209,10 +1211,11 @@
                 </div>
               </div>
 
-              <!-- Right Column: Polaroid of First Meet -->
-              <div class="md:col-span-5 flex justify-center sticky top-24">
+              <!-- Right Column: Polaroids of 1st Meet (Sushi Tei GI & First Photobox Blok M) -->
+              <div class="md:col-span-5 flex flex-col items-center gap-6 sticky top-24">
+                <!-- Polaroid 1: Sushi Tei GI -->
                 <div
-                  class="polaroid transform -rotate-2 hover:rotate-0 rounded-2xl w-full max-w-xs"
+                  class="polaroid transform -rotate-2 hover:rotate-0 rounded-2xl w-full max-w-xs transition-transform"
                 >
                   <!-- Washi Tape -->
                   <div class="washi-tape"></div>
@@ -1264,6 +1267,64 @@
                       class="text-[11px] text-stone-400 font-sans tracking-wide mt-0.5"
                     >
                       "The day my trembling hands met the sweetest smile."
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Polaroid 2: First Photobox at Blok M -->
+                <div
+                  class="polaroid transform rotate-2 hover:rotate-0 rounded-2xl w-full max-w-xs transition-transform"
+                >
+                  <!-- Washi Tape -->
+                  <div class="washi-tape"></div>
+
+                  <!-- Photo Container -->
+                  <div
+                    class="w-full aspect-[3/4] bg-stone-100 rounded-xl overflow-hidden border border-stone-200 relative group cursor-pointer"
+                    onclick="openPhotoModal('assets/photobox-blokm.jpg')"
+                  >
+                    <img
+                      id="photobox-blokm-photo"
+                      src="assets/photobox-blokm.jpg"
+                      onerror="
+                        this.src =
+                          'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'
+                      "
+                      alt="Our First Photobox at Blok M"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent pointer-events-none"
+                    ></div>
+                    <div
+                      class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-[10px] text-white px-2 py-0.5 rounded-full flex items-center gap-1 opacity-0 group-hover:opacity-100 transition"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                      Tap to enlarge
+                    </div>
+                  </div>
+
+                  <!-- Handwritten Caption -->
+                  <div class="mt-4 text-center">
+                    <p class="font-handwriting text-2xl text-stone-800">
+                      Our First Photobox • Blok M 📸✨
+                    </p>
+                    <p
+                      class="text-[11px] text-stone-400 font-sans tracking-wide mt-0.5"
+                    >
+                      "Capturing our very first smiles together in a tiny frame."
                     </p>
                   </div>
                 </div>
@@ -1749,290 +1810,7 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 9: OUR PROGRESS TIMELINE           -->
-      <!-- ========================================== -->
-      <section class="scroll-mt-20">
-        <div class="glow-card rounded-3xl p-6 md:p-10 relative overflow-hidden">
-          <span
-            class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
-            >09</span
-          >
-
-          <div class="relative z-10 space-y-10">
-            <div class="text-center max-w-xl mx-auto space-y-2">
-              <div
-                class="inline-block text-xs uppercase tracking-widest text-rose-500 font-semibold bg-rose-50 px-3 py-1 rounded-md"
-              >
-                How Far We've Walked
-              </div>
-              <h2
-                class="font-serif text-3xl md:text-4xl font-semibold text-rose-950"
-              >
-                Our Journey & Milestones
-              </h2>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                From two strangers on an app to my favorite person in the entire
-                world.
-              </p>
-            </div>
-
-            <!-- Vertical Timeline -->
-            <div
-              class="relative border-l-2 border-rose-200/80 ml-4 md:ml-32 space-y-8 pl-6 md:pl-8"
-            >
-              <!-- Milestone 1 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-amber-400 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-amber-600 tracking-wider"
-                  >The First Match • Bumble</span
-                >
-                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
-                  Finding "Nisa" on Bumble
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  A simple swipe right that would soon change everything.
-                </p>
-              </div>
-
-              <!-- Milestone 2 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-blue-400 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-blue-600 tracking-wider"
-                  >20 September • LinkedIn</span
-                >
-                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
-                  Professional Mutuals
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  Connecting on LinkedIn and discovering how smart, capable, and
-                  inspiring you are.
-                </p>
-              </div>
-
-              <!-- Milestone 3 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-400 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-rose-500 tracking-wider"
-                  >21 September • Instagram</span
-                >
-                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
-                  Tapping "Follow" on @vaniacha_
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  Wildan finally pressing follow, hoping to get a chance to step
-                  into your world.
-                </p>
-              </div>
-
-              <!-- Milestone 4 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-500 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-rose-600 tracking-wider"
-                  >24 September • The First DM</span
-                >
-                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
-                  Cheerful First Chat & The Nailong Sticker
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  Breaking the ice with your remarkably cheerful energy and that
-                  unforgettable goofy Nailong yellow dragon sticker.
-                </p>
-              </div>
-
-              <!-- Milestone 5 (THE FIRST WHATSAPP CALL) -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-emerald-500 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-emerald-600 tracking-wider"
-                  >WhatsApp Voice Call • Saved as 파니아</span
-                >
-                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
-                  Late-Night Call on WhatsApp
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  From text messages to hours talking on WhatsApp. Hearing your
-                  warm, cheerful laugh and saving you as
-                  <strong class="font-korean text-rose-600">파니아</strong> in
-                  my phone.
-                </p>
-              </div>
-
-              <!-- Milestone 6 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-purple-500 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-purple-600 tracking-wider"
-                  >The Effort • Glasses Hunt</span
-                >
-                <h4 class="font-serif text-xl font-bold text-stone-900 mt-0.5">
-                  The Great Glasses Search
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  Looking everywhere for identical frames to comfort you, before
-                  finding out they were at your house all along!
-                </p>
-              </div>
-
-              <!-- Milestone 7 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-600 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <div
-                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4"
-                >
-                  <div class="flex-1">
-                    <span
-                      class="text-xs uppercase font-semibold text-rose-700 tracking-wider"
-                      >17 October • 1st Date</span
-                    >
-                    <h4
-                      class="font-serif text-xl font-bold text-stone-900 mt-0.5"
-                    >
-                      Sushi Tei Grand Indonesia
-                    </h4>
-                    <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                      Sitting across from you with shaking hands and a heart
-                      that was falling fast.
-                    </p>
-                  </div>
-                  <!-- Photo Thumbnail -->
-                  <div
-                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 border-white shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition-transform relative group/thumb"
-                    onclick="openPhotoModal('assets/first-meet.jpg')"
-                    title="Click to view full photo"
-                  >
-                    <img
-                      src="assets/first-meet.jpg"
-                      onerror="
-                        this.src =
-                          'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=400&q=80'
-                      "
-                      alt="1st Date at Sushi Tei GI"
-                      class="w-full h-full object-cover"
-                    />
-                    <div
-                      class="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition flex items-center justify-center text-white"
-                    >
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 8 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-rose-500 group-hover:scale-125 transition-transform shadow-sm"
-                ></span>
-                <div
-                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4"
-                >
-                  <div class="flex-1">
-                    <span
-                      class="text-xs uppercase font-semibold text-rose-700 tracking-wider"
-                      >14 November • 2nd Date</span
-                    >
-                    <h4
-                      class="font-serif text-xl font-bold text-stone-900 mt-0.5"
-                    >
-                      Trans Studio Mall Cibubur
-                    </h4>
-                    <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                      My 1st visit & your 3rd, trying brand new thrilling rides
-                      together, followed by our hilarious ride-home search for
-                      the mythical "Sari Roti bulat srikaya".
-                    </p>
-                  </div>
-                  <!-- Photo Thumbnail -->
-                  <div
-                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 border-white shadow-md flex-shrink-0 cursor-pointer hover:scale-105 transition-transform relative group/thumb"
-                    onclick="openPhotoModal('assets/second-meet.jpg')"
-                    title="Click to view full photo"
-                  >
-                    <img
-                      id="second-meet-thumb"
-                      src="assets/second-meet.jpg"
-                      onerror="
-                        this.src =
-                          'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80'
-                      "
-                      alt="2nd Date at TSM Cibubur"
-                      class="w-full h-full object-cover"
-                    />
-                    <div
-                      class="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition flex items-center justify-center text-white"
-                    >
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 9 -->
-              <div class="relative group">
-                <span
-                  class="absolute -left-[31px] md:-left-[39px] top-1 w-4 h-4 rounded-full bg-white border-4 border-pink-500 group-hover:scale-125 transition-transform ring-4 ring-pink-100"
-                ></span>
-                <span
-                  class="text-xs uppercase font-semibold text-rose-700 tracking-wider"
-                  >18 November • Today</span
-                >
-                <h4 class="font-serif text-xl font-bold text-rose-950 mt-0.5">
-                  Happy 23rd Birthday, 파니아!
-                </h4>
-                <p class="text-stone-600 text-sm leading-relaxed mt-1">
-                  Celebrating you today, and looking forward to every sweet
-                  memory yet to come.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- CHAPTER 10: BIRTHDAY LOVE LETTER           -->
+      <!-- CHAPTER 9: BIRTHDAY LOVE LETTER           -->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div class="relative">
@@ -2094,6 +1872,10 @@
                 </p>
 
                 <p>
+                  Dan satu harapan kecilku yang tulus: masih banyak banget makanan-makanan yang belum pernah aku coba, dan aku sangat berharap kamu adalah orang yang bakal terus menemaniku mencoba berbagai makanan baru sebanyak mungkin ke depannya. 🍣🥢✨
+                </p>
+
+                <p>
                   Thank you for simply being you, 파니아. May your 23rd year be
                   your most beautiful chapter yet.
                 </p>
@@ -2116,7 +1898,7 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 11: INTERACTIVE BIRTHDAY CAKE      -->
+      <!-- CHAPTER 10: INTERACTIVE BIRTHDAY CAKE      -->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div
@@ -2220,7 +2002,7 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 12: LITTLE TRUTHS (INTERACTIVE CARDS)-->
+      <!-- CHAPTER 11: LITTLE TRUTHS (INTERACTIVE CARDS)-->
       <!-- ========================================== -->
       <section class="scroll-mt-20">
         <div class="text-center max-w-xl mx-auto space-y-2 mb-8">
@@ -2357,14 +2139,14 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- CHAPTER 13: A SAFE SPACE FOR YOUR THOUGHTS -->
+      <!-- CHAPTER 12: A SAFE SPACE FOR YOUR THOUGHTS -->
       <!-- (REFLECTION & HONEST NOTE FOR WILDAN)      -->
       <!-- ========================================== -->
       <section class="scroll-mt-20" id="reflection-section">
         <div class="glow-card rounded-3xl p-6 md:p-12 relative overflow-hidden">
           <span
             class="absolute -right-4 -bottom-6 text-8xl md:text-9xl font-serif font-bold text-rose-100/50 select-none pointer-events-none"
-            >13</span
+            >12</span
           >
 
           <div class="relative z-10 max-w-2xl mx-auto space-y-8">
